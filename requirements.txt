@@ -1,8 +1,0 @@
-git+https://gitlab.com/GinFuyou/django-celestia.git
-Django>2.0,<2.1
-django-classy-settings>=2.1.1
-django-debug-toolbar==1.9.1
-django-redis>=4.8.0
-psycopg2>=2.7.5
-uwsgi
-dateutils

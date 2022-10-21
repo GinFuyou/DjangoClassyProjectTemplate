@@ -2,9 +2,7 @@
 
 import os
 
-#from django.views.generic.edit import CreateView, FormView
 #from django.views.generic import DetailView
-#from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView #, RedirectView
 from django.utils.decorators import method_decorator
 from django.views.decorators.gzip import gzip_page
