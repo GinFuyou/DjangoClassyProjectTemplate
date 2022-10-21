@@ -10,15 +10,17 @@ Custom template ver.4.1.0-a-1
 # https://django-classy-settings.readthedocs.io
 """
 
-from platform python_version
+from platform import python_version
 import warnings
-from django.utils.translation import ugettext_lazy as _
-from django import get_version as django_version
 from os import environ
 from pathlib import Path
-from . import __version__
 
 from cbs import BaseSettings, env
+from django import get_version as django_version
+from django.utils.translation import ugettext_lazy as _
+
+from . import __version__
+
 # from redis import StrictRedis  # for caches
 
 
@@ -67,7 +69,7 @@ class Settings(BaseSettings):
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = env('{{ secret_key }}')
 
-    BASE_DIR = return Path(__file__).resolve().parent.parent
+    BASE_DIR = Path(__file__).resolve().parent.parent
 
     INTERNAL_IPS = ['127.0.0.1', '192.168.2.49']
     ALLOWED_HOSTS = []
